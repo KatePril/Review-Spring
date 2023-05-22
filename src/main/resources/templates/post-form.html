@@ -8,6 +8,7 @@
 <body class="bg-warning">
 <div class="container-sm">
     <form style="width: 100%;border-radius: 10px;" class="p-2 bg-success m-2" action="/posts" method="post" th:object="${post}">
+        <input type="hidden" name="id"th:field="*{id}">
         <div class="alert alert-danger alert-dismissible fade show" role="alert" th:if="${errorNickname}">
             <p th:text="${errorNickname}"></p>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
